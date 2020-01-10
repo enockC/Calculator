@@ -15,10 +15,10 @@ namespace BasicCalculator.Tests
         {
             Calculator calculator = new Calculator();
 
-            int c = calculator.Add(1, 2);
+            int c = calculator.Add(100, 221);
 
-            Assert.AreEqual(3, c);
-            Assert.AreEqual(3, calculator.result);
+            Assert.AreEqual(321, c);
+            Assert.AreEqual(321, calculator.result);
 
         }
         [TestMethod()]
