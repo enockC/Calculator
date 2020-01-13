@@ -6,18 +6,18 @@ using System.Text;
 
 namespace Operation.Tests
 {
+
     [TestClass()]
     public class RandomisingTests
     {
-        private readonly int min = 12;
-        private readonly int max = 24;
-        Randomising rand = new Randomising();
-        Randomising rand1 = new Randomising();
-
+        private readonly int min = 10;
+        private readonly int max = 30;
+        private readonly Randomising random = new Randomising(2);
         [TestMethod()]
         public void RandomiseTest()
         {
-            Assert.AreEqual(rand.Randomise(min, max), rand1.Randomise(min, max));
+            //Assert.IsTrue();
+            Assert.AreEqual(random.GenerateRandomNumber(min, max), random.GenerateRandomNumber(min, max));
         }
     }
 }

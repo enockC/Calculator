@@ -6,12 +6,19 @@ namespace Operation
 {
     public class Randomising
     {
-        
-
-        public int Randomise(int min, int max)
+        private readonly dynamic Seed;
+        //private static object random;
+        public Randomising(dynamic seed)
         {
-            Random random = new Random(0);
-            return random.Next(min, max);
+            Seed = seed;
         }
+        public int GenerateRandomNumber(int min, int max)
+        {
+            Random random = new Random(Seed);
+            var randomNumber = random.Next(min, max);
+            return randomNumber;
+        }
+
     }
 }
+
